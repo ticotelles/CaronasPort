@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbb1b1;
+}
+.container{
+    background-color: #fafafa;
+    border-radius: 14px;
+    margin: 14px;
+    max-width: 500px;
+    height: 500px;
+    width: 100%;
+    box-shadow:  0 3px 5px rgba(0,0,0,0.5);
+
+   
+}
+
+.filtrarPesquisa{
+    
+    height: 400px;
+}
+.date{
+     margin-top: 15px;
+     margin-left: 20px;
+}
+.checkbox{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.obs{
+    margin-top: 15px;
+    margin-left: 20px;
+    
+}
+
+.btn{
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+.title{
+    margin: 10px;
+    margin-top: 60px;
+}
