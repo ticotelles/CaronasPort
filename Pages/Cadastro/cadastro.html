@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    
+    <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
      
@@ -15,19 +17,21 @@
 
         <form id="form" class="form">
             <div class="form-content">
-                <label for="username">Nome do Usuário: </label>
+                <label for="name">Nome do Usuário: </label>
                 <input
                     type="text"
-                    id="username"
-                    placeholder="Digite o nome do usuário..."
+                    name="name"
+                    id="name"
+                    placeholder="Digite o nome do usuário..." 
                 />
             </div>
 
             <div class="form-content">
-                <label for="username">E-mail: </label>
+                <label for="email">E-mail: </label>
                 <input
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="Digite o E-mail..."
                 />
             </div>
@@ -37,24 +41,25 @@
                 <input
                     type="text"
                     id="telefone"
+                    name="telefone"
                     placeholder="Digite o Telefone"
                 />
             </div>
 
             <div class="form-content">
-                <label for="username">Senha: </label>
+                <label for="password">Senha: </label>
                 <input
                     type="password"
-                    id="senha"
+                    id="password"
                     placeholder="Digite a Senha..."
                 />
             </div>
 
             <div class="form-content">
-                <label for="username">Confirme a Senha: </label>
+                <label for="confirmPass">Confirme a Senha: </label>
                 <input
                     type="password"
-                    id="confirmarSenha"
+                    id="confirmPass"
                     placeholder="Confime a senha"
                 />
             </div>
@@ -66,6 +71,23 @@
 
 
     </div>
-    <link rel="stylesheet" href="cadastro.css">
+    
+
+    <script>
+    const form = document.getElementById('form');
+    
+    form.addEventListener('submit' , event => {
+        event.preventDefault();
+      
+
+        const name = document.querySelector('#name');
+        const email = document.querySelector('#email');
+        const tell = document.querySelector('#telefone');
+
+        console.log(name.value, email.value, telefone.value);
+    })
+</script>
+
 </body>
+
 </html>
