@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    
+    <script src="../../index.js"></script>
     <link rel="stylesheet" href="cadastro.css">
 </head>
+
 <body>
-     
+
     <div class="container">
         <section class="header">
             <h2>Nova conta</h2>
@@ -18,62 +20,39 @@
         <form id="form" class="form">
             <div class="form-content">
                 <label for="name">Nome do Usuário: </label>
-                <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Digite o nome do usuário..." 
-                />
+                <input type="text" name="name" id="name" placeholder="Digite o nome do usuário..." />
             </div>
 
             <div class="form-content">
                 <label for="email">E-mail: </label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Digite o E-mail..."
-                />
+                <input type="email" id="email" name="email" placeholder="Digite o E-mail..." />
             </div>
 
             <div class="form-content">
                 <label for="username">Telefone: </label>
-                <input
-                    type="text"
-                    id="telefone"
-                    name="telefone"
-                    placeholder="Digite o Telefone"
-                />
+                <input type="text" id="telefone" name="telefone" placeholder="Digite o Telefone" />
             </div>
 
             <div class="form-content">
                 <label for="password">Senha: </label>
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Digite a Senha..."
-                />
+                <input type="password" id="password" placeholder="Digite a Senha..." />
             </div>
 
             <div class="form-content">
                 <label for="confirmPass">Confirme a Senha: </label>
-                <input
-                    type="password"
-                    id="confirmPass"
-                    placeholder="Confime a senha"
-                />
+                <input type="password" id="confirmPass" placeholder="Confime a senha" />
             </div>
 
-            <button type="submit">Cadastrar</button>
+            <button type="button" onclick="login()">Cadastrar</button>
 
         </form>
 
 
 
     </div>
-    
 
-    <script>
+
+    <!-- <script>
     const form = document.getElementById('form');
     
     form.addEventListener('submit' , event => {
@@ -86,7 +65,7 @@
 
         console.log(name.value, email.value, telefone.value);
     })
-</script>
+</script> -->
 
 </body>
 

@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Carona</title>
+    <script src="../../index.js"></script>
     <link rel="stylesheet" href="cadastroCarona.css">
 </head>
+
 <body>
     <div class="container">
-        
-            <form class="form" id="form">
-                  
-                <div class="title">
-                    <label class="cidade1" for="cidade1"> Cidade</label>
+
+        <form class="form" id="form">
+
+            <div class="title">
+                <label class="cidade1" for="cidade1"> Cidade</label>
                 <input type="cidade1" id="cidade1" placeholder="Pesquise a Cidade aqui...">
-                <label class="title" for="cidade2"> Para</label>  
+                <label class="title" for="cidade2"> Para</label>
                 <input type="cidade2" id="cidade2" placeholder="Pesquise a Cidade aqui">
-                </div>
-                
+            </div>
 
-                <div class="date" id="date">
-                    <label for="data">Data:</label>
-                    <input type="text" id="data" name="data">
-                </div>
-                
-                
-                
 
-                <div class="checkbox">
-                    <input type="checkbox">Leva encomenda</input>
-                </div>
-                <div class="texto" id="texto">
-                    
-                    <textarea id="texto" name="texto" placeholder="Observações"  rows=5 cols=35>Observações</textarea>
-                </div>
+            <div class="date" id="date">
+                <label for="data">Data:</label>
+                <input type="text" id="data" name="data">
+            </div>
 
-                <div class="submit" id="submit">
-                    <button type="submit">Cadastrar</button>
-                </div>
-                
-            </form>
-        
+
+
+
+            <div class="checkbox">
+                <input type="checkbox">Leva encomenda</input>
+            </div>
+            <div class="texto">
+
+                <textarea id="texto" name="texto" placeholder="Observações" rows=5 cols=35>Observações</textarea>
+            </div>
+
+            <div class="">
+                <button type="button" onclick="caronaCadastrada()">Cadastrar</button>
+            </div>
+
+            <div>
+                <button type="button" onclick="login()">Voltar</button>
+            </div>
+
+        </form>
+
 
     </div>
 
-    <script>
+    <!-- <script>
         const form = document.getElementById('form');
         
         form.addEventListener('submit' , event => {
@@ -59,7 +66,7 @@
     
             console.log(cidade1.value, cidade2.value, data.value);
         })
-    </script>
+    </script> -->
 </body>
 
 </html>
