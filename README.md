@@ -7,23 +7,12 @@ Aplicativo de Caronas.
 </p>
 
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
-</p>
-
-<p align="center">
-  <img alt="License" src="designer.png">
-  ![Texto alternativo](designer.png)
+ 
+  <img src="Caronas-Port/src/assets/designer.png" alt="Designer das Telas">
 
 </p>
 
 <br>
-
-<p align="center">
-  <img alt="designer" src="designer.png" width="100%">
-  ![Texto alternativo](designer.jpg)
-</p>
 
 ## 🚀 Tecnologias
 
@@ -37,30 +26,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-No norte de Minas Gerais é muito comun pessoas pegarem carona para cidades vizinhas pagando um pequeno valor na ajuda da gasolina
 
-## 🚀 O que eu aprendi
+Na região norte de Minas Gerais, é recorrente a prática de compartilhamento de caronas entre cidades vizinhas mediante uma contribuição financeira para auxílio no custeio da gasolina. Embora existam grupos dedicados a essa finalidade no WhatsApp e Facebook, as publicações nesses meios carecem de uma padronização consistente, o que gera confusão tanto para os usuários que buscam caronas quanto para os condutores que as oferecem.
 
-- Criamos o projeto inicial com NextJS;
-- Vimos NPM scripts;
-- Entendemos como checar a versão do Node e que o NPM vem junto com o projeto;
-- Utilizamos o npx gitignore node para gerar o gitignore do projeto;
-- Vimos a criação de um componente com React;
-- Vimos como trabalhar com estilos no React;
-- Como trabalhar com StyledComponents;
-- Vimos como usar Props no React;
-- Vimos sobre o children do React;
-- Pegamos o CSS já pré-criado pelo DevSoutinho, adicionamos no nosso projeto e seguimos com os desafios.
-- Criamos o nosso search.js;
-- Aprendemos sobre State;
-- Vimos o conceito de Prop-drilling;
-- No final, criamos o banner utilizando Styled Components e passando Props por ele.
+Diante desse desafio identificado, surgiu a concepção do Caronas App. Este aplicativo propõe uma solução estruturada e eficiente ao reunir usuários que disponibilizam caronas, aqueles que buscam esse serviço e indivíduos que solicitam caronas. O diferencial reside na implementação de um formato padronizado para as publicações, abrangendo informações essenciais como local de partida, destino, horário, valor da contribuição, detalhes adicionais e informações de contato.
 
-## :memo: Licença
+Ao adotar esse enfoque organizado, o Caronas App visa simplificar e aprimorar a experiência dos usuários, proporcionando maior clareza, transparência e facilidade na busca e oferta de caronas na região. Esta iniciativa visa otimizar a comunicação entre aqueles que compartilham veículos e fortalecer a prática de caronas de maneira segura e eficiente.
 
-Esse projeto está sob a licença MIT.
 
----
-
-#ImersãoReact
-#Aluratube
+----------------------------------------------------------------------------------------------------------------------
