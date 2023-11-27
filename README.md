@@ -18,7 +18,7 @@ Aplicativo de Caronas.
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML e CSS (O CSS foi disponibilizado pela Alura para focar o aprendizado em React)
+- HTML e CSS 
 - JavaScript
 - ReactJS
 - Git e Github
