@@ -2,16 +2,17 @@
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: normal;
     align-items: center;
     padding-top: 40px;  
     padding-bottom: 80px;    
     min-height: 100vh;
+    
 }
 main header {
     text-align: center;
     color: #FFA500;
-    font-size: 30px
+    font-size: 20px
 }
 main div.content {
     display: flex;
@@ -27,7 +28,7 @@ main div.content div.contentInputs {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;   
+    gap: 30px;   
 }
 
 
