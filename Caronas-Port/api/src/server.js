@@ -22,6 +22,33 @@ app.use(cors());
       });
       console.log("criado a tabela users");
     }
+
+    if ((await knex.schema.hasTable("offerRide")) == false) {
+        await knex.schema.createTable("offerRide", function (table) {
+          table.increments("id").primary();
+          table.string("origin");
+          table.string("destination");
+          table.dateTime("time");
+          table.integer("price");
+          table.date("date");
+          table.integer("telephone");
+          table.string("description");
+        });
+        console.log("criado tabela offerRide");
+      }
+    
+      if ((await knex.schema.hasTable("requestRide")) == false) {
+        await knex.schema.createTable("requestRide", function (table) {
+          table.increments("id").primary();
+          table.string("origin");
+          table.string("destination");
+          table.dateTime("time");
+          table.date("date");
+          table.integer("telephone");
+          table.string("description");
+        });
+      }
+      console.log("criado a tabela requestRide");
 })();
 
 
