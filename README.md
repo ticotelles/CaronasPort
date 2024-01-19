@@ -8,7 +8,7 @@ Aplicativo de Caronas.
 
 <p align="center">
  
-  <img src="Caronas-Port/src/assets/designer.png" alt="Designer das Telas">
+  <img src="Caronas-Port/designer.png" alt="Designer das Telas">
 
 </p>
 
