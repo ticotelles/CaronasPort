@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const knex = require("./database");
 const app = express();
+const appRoutes = require("./routes");
 
 app.use(express.json());
 app.use(cors());
@@ -14,6 +15,7 @@ app.use(cors());
       table.string("email");
       table.string("telephone");
       table.date("date_birth");
+      table.string("password");
     });
 
     console.log("criado a tabela users");
@@ -27,6 +29,8 @@ app.use(cors());
       table.dateTime("time");
       table.integer("price");
       table.date("date");
+      table.boolean("animals");
+      table.boolean("baggage");
       table.integer("telephone");
       table.string("description");
     });
@@ -43,122 +47,13 @@ app.use(cors());
       table.integer("telephone");
       table.string("description");
     });
+    console.log("criado a tabela requestRide");
   }
-  console.log("criado a tabela requestRide");
+  
 })();
+
+app.use("/", appRoutes);
 
 app.listen("3333", function () {
   console.log("server rodando");
-});
-
-/*--------------------------USERS----------------------------*/
-app.post("/users", function (req, res) {
-  try {
-    res.status(201).json({ status: "ok"});
-  } catch (error) {
-    console.log(error)
-  }
-  
-});
-
-app.get("/users", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.put("/users", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.delete("/users", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-/*--------------------------search----------------------------*/
-
-app.get("/search", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-/* -------------------------offer---------------------------*/
-
-app.post("/offer", function (req, res) {
-  try {
-    res.status(201).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.get("/offer", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.put("/offer", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.delete("/offer", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-/* -------------------------request---------------------------*/
-
-app.post("/request", function (req, res) {
-  try {
-    res.status(201).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.get("/request", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.put("/request", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-app.delete("/request", function (req, res) {
-  try {
-    res.status(200).json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-  }
 });
