@@ -14,16 +14,17 @@ app.use(cors());
       table.string("name");
       table.string("email");
       table.string("telephone");
-      table.date("date_birth");
+      table.string("vehicle");
       table.string("password");
     });
 
     console.log("criado a tabela users");
   }
 
-  if ((await knex.schema.hasTable("offerRide")) == false) {
-    await knex.schema.createTable("offerRide", function (table) {
+  if ((await knex.schema.hasTable("ride")) == false) {
+    await knex.schema.createTable("ride", function (table) {
       table.increments("id").primary();
+      table.integer('user_id');
       table.string("origin");
       table.string("destination");
       table.dateTime("time");
@@ -32,23 +33,24 @@ app.use(cors());
       table.boolean("animals");
       table.boolean("baggage");
       table.integer("telephone");
-      table.string("description");
+      table.string("type");
+      table.string("observation");
     });
-    console.log("criado tabela offerRide");
+    console.log("criado tabela Ride");
   }
 
-  if ((await knex.schema.hasTable("requestRide")) == false) {
-    await knex.schema.createTable("requestRide", function (table) {
-      table.increments("id").primary();
-      table.string("origin");
-      table.string("destination");
-      table.dateTime("time");
-      table.date("date");
-      table.integer("telephone");
-      table.string("description");
-    });
-    console.log("criado a tabela requestRide");
-  }
+  // if ((await knex.schema.hasTable("requestRide")) == false) {
+  //   await knex.schema.createTable("requestRide", function (table) {
+  //     table.increments("id").primary();
+  //     table.string("origin");
+  //     table.string("destination");
+  //     table.dateTime("time");
+  //     table.date("date");
+  //     table.integer("telephone");
+  //     table.string("description");
+  //   });
+  //   console.log("criado a tabela requestRide");
+  // }
   
 })();
 
