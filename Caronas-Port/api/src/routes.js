@@ -1,6 +1,6 @@
 const express = require('express');
 const knex = require("./database");
-const offerController = require("./controllers/offer");
+const offerController = require("./controllers/ride");
 const requestController = require("./controllers/request");
 const searchController = require("./controllers/search");
 const usersController = require("./controllers/users");
