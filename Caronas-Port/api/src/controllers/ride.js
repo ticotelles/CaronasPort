@@ -10,12 +10,12 @@ class rideController {
         });
       }
 
-      // if (!req.body.time || req.body.time == "") {
-      //   return res.status(400).json({
-      //     status: "ERROR",
-      //     msg: "O Horário é Obrigatório! ",
-      //   });
-      // }
+      if (!req.body.time || req.body.time == "") {
+        return res.status(400).json({
+          status: "ERROR",
+          msg: "O Horário é Obrigatório! ",
+        });
+      }
 
       if (!req.body.destiny || req.body.destiny == "") {
         return res.status(400).json({
@@ -66,7 +66,13 @@ class rideController {
 
   async getOne(req, res) {
     try {
-      const data = await knex("ride").where("id", req.params.id).first();
+      const dataRide = await knex("ride").where("id", req.params.id).first();
+      const dataUser = await knex.select("name", "vehicle", "telephone").from("users");
+      const data = {
+        dataUser,
+        dataRide
+      };
+
       if (data === undefined) {
         return res.status(400).json({
           status: "ERROR",
