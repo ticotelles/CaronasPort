@@ -14,49 +14,60 @@ class usersController {
 
   async create(req, res) {
     try {
-      if (!req.body.valueInputName || req.body.valueInputName == "") {
+      if (!req.body.name || req.body.name == "") {
         return res.status(400).json({
           status: "ERROR",
           msg: "O nome é obrigatório!",
         });
       };
 
-      if (!req.body.valueInputEmail || req.body.valueInputEmail == "") {
+      if (!req.body.email || req.body.email == "") {
         return res.status(400).json({
           status: "ERROR",
           msg: "O E-mail é obrigatório!",
         })
       };
 
-      if (!req.body.valueInputPhone || req.body.valueInputPhone == "") {
+      if (!req.body.phone || req.body.phone == "") {
         return res.status(400).json({
           status: "ERROR",
           msg: "O Telefone é obrigatório!",
         })
       };
       
-      if (!req.body.valueInputDate || req.body.valueInputDate == "") { 
-        return res.status(400).json({
-          status: "ERROR",
-          msg: "A Data é obrigatório!",
-        })
-      };
+      // if (!req.body.valueInputDate || req.body.valueInputDate == "") { 
+      //   return res.status(400).json({
+      //     status: "ERROR",
+      //     msg: "A Data é obrigatório!",
+      //   })
+      // };
 
-      if (!req.body.valueInputPassword || req.body.valueInputPassword == "") {
+      if (!req.body.pass || req.body.pass == "") {
         return res.status(400).json({
           status: "ERROR",
           msg: "O password é obrigatório!",
         })
       };
 
+      const user = await knex("users").where({email: req.body.email}).first();
+     
+      //valida se o usuário existe
+      if (user !== undefined) {
+        return res.status(400).json({
+          status: "ERROR",
+          msg: "E-mail já cadastrado!"
+        });
+      }
+ 
+
       res.status(201).json({ status: "OK" });
 
       const data = {
-        name: req.body.valueInputName,
-        email: req.body.valueInputEmail,
-        telephone: req.body.valueInputPhone,
-        date_birth: req.body.valueInputDate,
-        password: req.body.valueInputPassword,
+        name: req.body.name,
+        email: req.body.email,
+        telephone: req.body.phone,
+        vehicle: req.body.vehicle,
+        password: req.body.pass,
       };
 
       await knex("users").insert(data);
