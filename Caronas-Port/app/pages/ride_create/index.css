@@ -1,0 +1,185 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+header {
+    text-align: center;
+    color: #FFA500;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+header img {
+    width: 80px;
+}
+
+.container {
+    margin-right: 4px;
+}
+
+
+main div.inputs_with_clock {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.inputs_with_clock input {
+    width: 100%;
+}
+
+
+.label-informacoes {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 15px;
+    height: 2em;
+    color: gray;
+}
+
+main div.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    left: 30px;
+    margin-top: 6 px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+
+main fieldset {
+    height: 150px;
+    border-radius: 16px;
+    width: 302px;
+    border: 1px solid #FFA500;
+}
+
+
+h4 {
+    display: table-caption;
+    margin-block-start: 2.3em;
+    margin-block-end: -5.33em;
+    margin-inline-start: 166px;
+    margin-inline-end: 0px;
+    font-weight: 400;
+    font-family: 'itim', cursive;
+    letter-spacing: -1.28px;
+    line-height: 66.523%;
+}
+
+main div.custom-checkbox input {
+    display: none;
+}
+
+main div.custom-checkbox input+label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+main div.custom-checkbox input:checked+label:before {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #FFA500;
+    /* background-position: center; */
+    border: none;
+    padding: 1px;
+}
+
+main div.check {
+    display: flex;
+    align-content:space-between;
+    font-size: 12px;
+    margin-top: 30px;
+    gap: 6px;
+    font-family: 'Itim', cursive;
+    color: #6e6e6e;
+}
+
+.custom-checkbox {
+    margin-right: 2rem;
+}
+
+main div.content div.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main div textarea {
+    border-color: #FFA500;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+main div.content_search {
+    display: flex;
+    flex-direction: column;
+    height: 51px;
+    margin-inline-start: 1.3em;
+    gap: 6px;
+}
+
+main input.origin {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 219px;
+    border-color: #d9d9d9;
+}
+
+main input.destiny {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 219px;
+    border-color: #d9d9d9;
+}
+
+main div.origin_image {
+    margin-top: -49px;
+    margin-left: 0px;
+}
+
+img.origin_image {
+    width: 15px;
+}
+
+main div.destiny_image {
+    margin-top: 4px;
+    margin-left: -2px;
+}
+
+img.destiny_image {
+    width: 16px;
+}
+
+main div.image_indication {
+    margin-top: -47px;
+    margin-left: 252px;
+}
+
+img.image_indication {
+    width: 30px;
+}
+
+button {
+    margin-top: 5rem;
+}
+
+
+
+

@@ -1,0 +1,5 @@
+node_modules
+api\node_modules
+appcaronas.sqlite3
+package-lock.json
+yarn.lock

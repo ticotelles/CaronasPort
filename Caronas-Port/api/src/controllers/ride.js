@@ -3,48 +3,47 @@ const knex = require("../database");
 class rideController {
   async create(req, res) {
     try {
-  
-      // if (!req.body.origin || req.body.origin == "") {
-      //   return res.status(400).json({
-      //     status: "ERROR",
-      //     msg: "O campo origin é Obrigatório! ",
-      //   });
-      // }
+      if (!req.body.origin) {
+        return res.status(400).json({
+          status: "ERROR",
+          msg: "O campo origin é Obrigatório! ",
+        });
+      }
 
-      // if (!req.body.time || req.body.time == "") {
-      //   return res.status(400).json({
-      //     status: "ERROR",
-      //     msg: "O time é Obrigatório! ",
-      //   });
-      // }
+      if (!req.body.time) {
+        return res.status(400).json({
+          status: "ERROR",
+          msg: "O time é Obrigatório! ",
+        });
+      }
 
-      // if (!req.body.destiny || req.body.destiny == "") {
-      //   return res.status(400).json({
-      //     status: "ERROR",
-      //     msg: "O campo destiny é Obrigatório! ",
-      //   });
-      // }
+      if (!req.body.destiny || req.body.destiny == "") {
+        return res.status(400).json({
+          status: "ERROR",
+          msg: "O campo destiny é Obrigatório! ",
+        });
+      }
 
-      // if (!req.body.date || req.body.date == "") {
-      //   return res.status(400).json({
-      //     status: "ERROR",
-      //     msg: "O campo date é Obrigatório! ",
-      //   });
-      // }
+      if (!req.body.date || req.body.date == "") {
+        return res.status(400).json({
+          status: "ERROR",
+          msg: "O campo date é Obrigatório! ",
+        });
+      }
 
-      // if (!req.body.type || req.body.time == "") {
-      //   return res.status(400).json({
-      //     status: "ERROR",
-      //     msg: "O campo type é Obrigatório!",
-      //   });
-      // }
+      if (!req.body.type || req.body.time == "") {
+        return res.status(400).json({
+          status: "ERROR",
+          msg: "O campo type é Obrigatório!",
+        });
+      }
 
-      // if (req.body.type !== "offer" && req.body.type !== "request") {
-      //   return res.status(400).json({
-      //     status: "ERROR",
-      //     msg: "O campo type aceita somente 'offer' ou 'request'",
-      //   });
-      // }
+      if (req.body.type !== "offer" && req.body.type !== "request") {
+        return res.status(400).json({
+          status: "ERROR",
+          msg: "O campo type aceita somente 'offer' ou 'request'",
+        });
+      }
 
       const data = {
         user_id: req.body.user_id,

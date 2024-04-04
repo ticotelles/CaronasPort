@@ -24,34 +24,16 @@ app.use(cors());
   if ((await knex.schema.hasTable("ride")) == false) {
     await knex.schema.createTable("ride", function (table) {
       table.increments("id").primary();
-      table.integer('user_id');
+      table.integer("user_id");
       table.string("origin");
       table.string("destination");
       table.dateTime("time");
-      table.integer("price");
       table.date("date");
-      table.boolean("animals");
-      table.boolean("baggage");
-      table.integer("telephone");
       table.string("type");
       table.string("observation");
     });
     console.log("criado tabela Ride");
   }
-
-  // if ((await knex.schema.hasTable("requestRide")) == false) {
-  //   await knex.schema.createTable("requestRide", function (table) {
-  //     table.increments("id").primary();
-  //     table.string("origin");
-  //     table.string("destination");
-  //     table.dateTime("time");
-  //     table.date("date");
-  //     table.integer("telephone");
-  //     table.string("description");
-  //   });
-  //   console.log("criado a tabela requestRide");
-  // }
-  
 })();
 
 app.use("/", appRoutes);

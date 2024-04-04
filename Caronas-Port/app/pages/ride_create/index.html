@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carona</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="../navegation.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="../images/logo Foto.jpg" alt="Logo do App Caronas" id="fotoo" />
+      <h3>Carona</h3>
+    </header>
+    <main>
+      <div class="content">
+        <div class="contents">
+          <div>
+            <div class="content_search">
+              <div>
+                <input class="origin" placeholder="Origem" id="origin" />
+              </div>
+
+              <div>
+                <input class="destiny" placeholder="Destino" id="destiny" />
+              </div>
+            </div>
+
+            <div class="origin_image">
+              <img class="origin_image" src="../images/Origem.png" />
+            </div>
+
+            <div class="destiny_image">
+              <img class="destiny_image" src="../images/Destino.png" />
+            </div>
+
+            <div class="image_indication">
+              <img class="image_indication" src="../images/indicação.png" />
+            </div>
+
+            <div class="label-informacoes">
+              <span>Informações</span>
+            </div>
+
+            <div class="inputs_with_icons">
+              <div class="inputs_with_clock">
+                <div class="input_clock_with_image">
+                  <img
+                    class="container"
+                    src="../images/icon_clock.png"
+                    alt="Foto do relogio"
+                  />
+                  <input
+                    class="input_clock container"
+                    type="text"
+                    placeholder="19:00"
+                    id="hour"
+                  />
+                </div>
+
+                <div class="input_calender_with_image">
+                  <img class="container" src="../images/Calendar.png" alt="" />
+                  <input
+                    class="input_calendar container"
+                    type="text"
+                    placeholder="Seg, 06 de Nov"
+                    id="date"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div class="input" style="margin-right: 20px">
+          <span>Observações</span>
+          <textarea
+            row="10"
+            maxlength="200"
+            placeholder="Descreva informações detalhadas das quais possam facilitar o processo entre o usuário e condutor."
+            rows="6"
+            id="textFieldDescribe"
+          ></textarea>
+        </div>
+
+        <div class="check">
+          <div class="custom-checkbox" id="offerOption">
+            <input class="checkbox" id="offerOption" type="checkbox" />
+            <label class="checkbox" for="offerOption">Oferecendo</label>
+          </div>
+
+          <div class="custom-checkbox" id="requestOption">
+            <input class="checkbox" id="requestOption" type="checkbox" />
+            <label class="checkbox" for="requestOption">Procurando</label>
+          </div>
+        </div>
+        <div>
+          <button>Criar</button>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/app/pages/ride_create/script.js"></script>
+  </body>
+</html>

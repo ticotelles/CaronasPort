@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Caronas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./index.css" />
+    <script src="../navegation.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/Logo Carro.jpg" alt="Logo do App Caronas" />
+        <h3>Caronas</h3>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="content_inputs">
+
+                <div class="input">
+                    <span>E-mail</span>
+                    <input type="email" id="email" />
+                </div>
+
+                <div class="input">
+                    <span>Senha</span>
+                    <input type="password" id="password" />
+                </div>
+
+            </div>
+
+            <div>
+                <button>Entrar</button>
+            </div>
+
+        </div>
+
+        <div class="links">
+            <a href="#" id="forgot-password">Esqueceu a senha?</a>
+            <div class="overlay" id="overlay">
+               <div class="alert" id="alert">
+                 <span id="alert-text"></span>
+                 <span class="button-close">X</span>
+               </div>
+            </div>
+            
+            <a href="##" onclick="navigate('register')">Cadastrar</a>
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

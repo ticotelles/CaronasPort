@@ -1,0 +1,36 @@
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+      
+}
+
+header {
+    text-align: center;
+    color: #FFA500;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+header img {
+    width: 80px;
+}
+
+main div.content_inputs {
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 28px;
+    padding-right: 28px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;   
+}
+
+main div.button_register {
+    margin-top: 4em;
+}
+
+
